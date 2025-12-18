@@ -502,6 +502,10 @@ $(function() {
 
     // 投稿一覧の初期読み込み
     loadPosts();
+
+    $("#changeButton").click(function(e) {
+        changeButtonClick(e);
+    });
 });
 
 // クリーンアップ処理
@@ -511,6 +515,11 @@ window.addEventListener('unload', () => {
         postsListener = null;
     }
 });
+
+function changeButtonClick(e){
+    $("#changeButton").html("テスト");
+}
+
     </script>
 </head>
 <body>
