@@ -408,7 +408,7 @@ function login(email, password) {
 }
 
 // 新規登録処理
-function register(email, password) {
+function register(email, password, name) {
     if (!validateAuthInput(email, password, true)) return;
 
     const button = $('#registerButton');
@@ -416,6 +416,9 @@ function register(email, password) {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
+        firebase.auth().currentUser.updateProfile({
+            displayName: name,
+        })
         showMessage('アカウントを作成しました');
         clearAuthForm();
     })
@@ -495,7 +498,8 @@ $(function() {
     $('#registerButton').on('click', () => {
         const email = $('#loginEmail').val();
         const password = $('#loginPassword').val();
-        register(email, password);
+        const name = $('#userName').val();
+        register(email, password, name);
     });
 
     $('#logoutButton').on('click', logout);
@@ -531,6 +535,7 @@ function changeButtonClick(e){
         $("#changeButton").css("background-color", "#f8f9fa");
         $("body").css("background-color", "rgba(0, 0, 0, 0.6)");
         changedColor = true;
+        console.log(currentUser.displayName);
     }
 }
 
