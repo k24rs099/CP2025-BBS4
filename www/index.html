@@ -456,11 +456,11 @@ function updateUI(user) {
     if (user) {
         $('.logged-in').show();
         $('.logged-out').hide();
-        $('#userEmail').text(user.email);
+        $('#userInfo').text(user.displayName + " / " + user.email);
     } else {
         $('.logged-in').hide();
         $('.logged-out').show();
-        $('#userEmail').text('');
+        $('#userInfo').text('');
     }
 }
 
@@ -555,6 +555,14 @@ function changeButtonClick(e){
 
         <!-- 認証フォーム（未ログイン時表示） -->
         <div class="auth-container logged-out">
+                           
+            <div class="form-group">
+                <label for="userName">ユーザー名</label>
+                <input type="text" id="userName"
+                       class="form-control" placeholder="">
+                <small class="help-text">※ログイン時は不要</small>
+            </div>
+
             <div class="form-group">
                 <label for="loginEmail">メールアドレス</label>
                 <input type="email" id="loginEmail"
@@ -566,14 +574,6 @@ function changeButtonClick(e){
                        class="form-control" placeholder="6文字以上">
                 <small class="help-text">※新規登録時は6文字以上</small>
             </div>
-
-            <div class="form-group">
-                <label for="userName">ユーザー名</label>
-                <input type="text" id="userName"
-                       class="form-control" placeholder="">
-                <small class="help-text">※ログイン時は不要</small>
-            </div>
-            
             <div class="button-group">
                 <button id="loginButton" class="btn-primary">ログイン</button>
                 <button id="registerButton" class="btn-secondary">新規登録</button>
@@ -582,7 +582,7 @@ function changeButtonClick(e){
 
         <!-- ログイン情報（ログイン時表示） -->
         <div class="user-info logged-in">
-            <span>ログイン中：<span id="userEmail"></span></span>
+            <span>ログイン中：<span id="userInfo"></span></span>
             <button id="logoutButton" class="btn-secondary">ログアウト</button>
         </div>
 
