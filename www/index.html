@@ -84,7 +84,7 @@ function validateContent(content) {
 }
 
 // 認証フォームのバリデーション
-function validateAuthInput(email, password, isRegister = false) {
+function validateAuthInput(email, password, name, isRegister = false) {
     if (!email || !email.trim()) {
         showMessage('メールアドレスを入力してください', 'error');
         return false;
@@ -95,6 +95,10 @@ function validateAuthInput(email, password, isRegister = false) {
     }
     if (isRegister && password.length < 6) {
         showMessage('パスワードは6文字以上にしてください', 'error');
+        return false;
+    }
+    if (isRegister && !name || isRegister && !name.trim()) {
+        showMessage('ユーザー名を入力してください', 'error');
         return false;
     }
     return true;
@@ -409,7 +413,7 @@ function login(email, password) {
 
 // 新規登録処理
 function register(email, password, name) {
-    if (!validateAuthInput(email, password, true)) return;
+    if (!validateAuthInput(email, password, name, true)) return;
 
     const button = $('#registerButton');
     button.prop('disabled', true);
