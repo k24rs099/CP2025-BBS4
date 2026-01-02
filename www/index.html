@@ -420,9 +420,13 @@ function register(email, password, name) {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
-        firebase.auth().currentUser.updateProfile({
+        return firebase.auth().currentUser.updateProfile({
             displayName: name,
         })
+    })
+    .then(() => {
+        const user = firebase.auth().currentUser;
+        updateUI(user);
         showMessage('アカウントを作成しました');
         clearAuthForm();
     })
@@ -449,6 +453,7 @@ function logout() {
 function clearAuthForm() {
     $('#loginEmail').val('');
     $('#loginPassword').val('');
+    $('#userName').val('');
 }
 
 // UI更新
