@@ -514,3 +514,17 @@ textarea.form-control {
     border-radius: 30px;
     position: absolute; top: 10px; left: 82%; width: 14%; height: 45px;
 }
+
+/* ダークモード時のスタイル */
+body.darkMode {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+body.darkMode h1, body.darkMode h2 {
+    color: white;
+}
+
+body.darkMode #changeButton {
+    background: #f8f9fa;
+    color: black;
+}

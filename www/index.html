@@ -23,9 +23,6 @@ let currentEditId = null;
 // ログイン中のユーザ
 let currentUser = null;
 
-// 背景色の切り替え
-let changedColor = false;
-
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
@@ -535,19 +532,7 @@ window.addEventListener('unload', () => {
 
 // 背景色の切り替えボタンを押した際の処理
 function changeButtonClick(e){
-    if(changedColor){
-        $("#changeButton").css("color", "#f8f9fa");
-        $("#changeButton").css("background-color", "black");
-        $("body").css("background-color", "#f8f9fa");
-        $("h1, h2").css("color", "black");
-        changedColor = false;
-    } else {
-        $("#changeButton").css("color", "black");
-        $("#changeButton").css("background-color", "#f8f9fa");
-        $("body").css("background-color", "rgba(0, 0, 0, 0.75)");
-        $("h1, h2").css("color", "white");
-        changedColor = true;
-    }
+    $("body").toggleClass("darkMode");
 }
 
     </script>
