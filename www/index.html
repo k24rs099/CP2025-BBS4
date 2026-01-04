@@ -539,11 +539,13 @@ function changeButtonClick(e){
         $("#changeButton").css("color", "#f8f9fa");
         $("#changeButton").css("background-color", "black");
         $("body").css("background-color", "#f8f9fa");
+        $("h1, h2").css("color", "black");
         changedColor = false;
     } else {
         $("#changeButton").css("color", "black");
         $("#changeButton").css("background-color", "#f8f9fa");
-        $("body").css("background-color", "rgba(0, 0, 0, 0.6)");
+        $("body").css("background-color", "rgba(0, 0, 0, 0.75)");
+        $("h1, h2").css("color", "white");
         changedColor = true;
     }
 }
