@@ -553,3 +553,11 @@ body.darkMode .form-control {
 body.darkMode #contentInput::placeholder {
    color: rgba(255, 255, 255, 0.7);
 }
+
+body.darkMode #contentInput {
+    color: white;
+}
+
+body.darkMode #sortOrder {
+    color: white;
+}
