@@ -561,3 +561,20 @@ body.darkMode #contentInput {
 body.darkMode #sortOrder {
     color: white;
 }
+
+body.darkMode .post {
+    background-color: rgba(90, 90, 90, 0.8);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+body.darkMode .post-author {
+    color: white;
+}
+
+body.darkMode .post-content {
+    color: white;
+}
+
+body.darkMode .post-footer * {
+    color: white;
+}
