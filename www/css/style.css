@@ -550,8 +550,8 @@ body.darkMode .form-control {
     background-color: rgba(90, 90, 90, 0.4);
 }
 
-body.darkMode #contentInput::placeholder {
-   color: rgba(255, 255, 255, 0.7);
+body.darkMode .form-group *::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 body.darkMode #contentInput {
@@ -605,4 +605,12 @@ body.darkMode #editContentCount {
 
 body.darkMode  .modal-body {
     color: white;
+}
+
+body.darkMode .auth-container {
+    background-color: rgba(90, 90, 90, 0.8);
+}
+
+body.darkMode .help-text {
+    color: rgba(255, 255, 255, 0.8);
 }
