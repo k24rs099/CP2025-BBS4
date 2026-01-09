@@ -578,3 +578,31 @@ body.darkMode .post-content {
 body.darkMode .post-footer * {
     color: white;
 }
+
+body.darkMode .modal-content {
+    background-color: rgba(90, 90, 90, 1.0);
+}
+
+body.darkMode h3 {
+    color: white;
+}
+
+body.darkMode .modal-close {
+    color: white;
+}
+
+body.darkMode .modal-close:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.darkMode #editContent {
+    color: white;
+}
+
+body.darkMode #editContentCount {
+    color: white;;
+}
+
+body.darkMode  .modal-body {
+    color: white;
+}
