@@ -554,7 +554,7 @@ body.darkMode .form-group *::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-body.darkMode #contentInput {
+body.darkMode textarea {
     color: white;
 }
 
@@ -595,15 +595,11 @@ body.darkMode .modal-close:hover {
     color: rgba(255, 255, 255, 0.8);
 }
 
-body.darkMode #editContent {
-    color: white;
-}
-
 body.darkMode #editContentCount {
     color: white;;
 }
 
-body.darkMode  .modal-body {
+body.darkMode .modal-body {
     color: white;
 }
 
@@ -613,4 +609,8 @@ body.darkMode .auth-container {
 
 body.darkMode .help-text {
     color: rgba(255, 255, 255, 0.8);
+}
+
+body.darkMode input {
+    color: white;
 }
