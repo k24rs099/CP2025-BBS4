@@ -511,8 +511,8 @@ textarea.form-control {
 #changeButton {
     background: black;
     color:#f8f9fa;
-    border-radius: 30px;
-    position: absolute; top: 10px; left: 82%; width: 14%; height: 45px;
+    border-radius: 5px;
+    position: absolute; top: 5px; left: 83%; width: 14%; height: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
